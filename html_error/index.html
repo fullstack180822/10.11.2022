@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="click_me()">CLICK -- error</button><br />
+    <button onclick="click_me2()">CLICK</button>
+    <script>
+        function click_me() {
+            const details = {
+                first_name: 'itay',
+                // name : {
+                //     first_name : 'itay'
+                // }
+            }
+            //console.log(details.name.first_name);
+            print_first_name(details)
+            console.log('lottery numbers: 43, 12, 17, 18, 22, 23')
+        }
+        function print_first_name(obj) {
+            try {
+                console.log(obj.name.first_name);
+                console.log('hello !');
+            }
+            catch (e) {
+                console.error(`in [ -- ${JSON.stringify(obj)} -- ]  there is no member called: ___.name.first_name!`)
+                console.log('========================================');
+                console.debug(e)
+                console.log('========================================');
+                //console.log(e);
+            }
+            finally {
+                console.log('tamid kore!!');
+            } //Executable code  
+            
+        }
+        function click_me2() {
+            //aaa()
+            console.error('my error!')
+            console.info('my info!')
+            console.warn('my warning!')
+            console.debug('my debug!')
+            //aaa()
+            //alert('working!')
+        }
+
+    </script>
+</body>
+
+</html>
