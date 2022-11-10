@@ -7,6 +7,8 @@
 // add another print after the finally 
 // create function a() -- which does nothing 
 // run again the code, did the finally print was executed
+// remove the catch paragraph, run again, did the program crashed? why?
+//      did the finally code was executed?
 
 // 2
 // create HTML page with button
