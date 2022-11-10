@@ -22,20 +22,24 @@
         }
         function print_first_name(obj) {
             try {
-                console.log(obj.name.first_name);
+                //console.log(obj.name.first_name);
+                a()
                 console.log('hello !');
             }
-            catch (e) {
+            catch (err) {
                 console.error(`in [ -- ${JSON.stringify(obj)} -- ]  there is no member called: ___.name.first_name!`)
                 console.log('========================================');
-                console.debug(e)
+                console.debug(err)
+                window.err = err
                 console.log('========================================');
                 //console.log(e);
+                console.log(`the error is TypeError?  ${err instanceof TypeError}`);
+                console.log(`the error is ReferenceError?  ${err instanceof ReferenceError}`);
             }
             finally {
                 console.log('tamid kore!!');
             } //Executable code  
-            
+
         }
         function click_me2() {
             //aaa()
@@ -46,7 +50,7 @@
             //aaa()
             //alert('working!')
         }
-
+        var y1 = 12
     </script>
 </body>
 
